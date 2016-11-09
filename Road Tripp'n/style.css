@@ -1,0 +1,11 @@
+body {
+	background-color: black;
+	width:100%;
+}
+
+#roadMap {
+	border:2px solid darkred;
+	width:98%;
+	height:95%;
+}
+
