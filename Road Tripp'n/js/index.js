@@ -1,3 +1,6 @@
+var longitude;
+var latitude;
+
 //
 
 var app = {
@@ -18,8 +21,8 @@ navigator.geolocation.getCurrentPosition(app.onSuccess, app.onError);
 
 //Geo located you! Good Job! 
 onSuccess: function(position) {
-	var longitude = position.coords.longitude; 
-	var latitude = position.coords.latitude; 
+	longitude = position.coords.longitude; 
+	latitude = position.coords.latitude; 
 	var latLong = new google.maps.LatLng(latitude, longitude); 
 
 //some map options. Crucial unit. 
@@ -31,8 +34,8 @@ onSuccess: function(position) {
 
 //let's make a map object.  We'll put it in the roadMap Div and define it with 
 // our Crucial Units from above. 
-	var map=new google.maps.Map(document.getElementById("roadMap"), mapOptions); 
-},
+	var map=new google.maps.Map(document.getElementById("roadMap"), mapOptions);      
+   },
 
 //Geo did not locate you. Game over. You're out of quarters. Man.  
 onError: function(error) {
@@ -40,3 +43,21 @@ onError: function(error) {
 },
 
 };
+
+function startTrip(){
+
+  
+
+    // Show a custom alertDismissed
+    //
+        navigator.notification.alert(
+            longitude + ' ' + latitude,  // message
+            alertDismissed,         // callback
+            'Your Position',            // title
+            'Done'                  // buttonName
+        );
+    }
+
+ function alertDismissed() {
+            // do something
+        }

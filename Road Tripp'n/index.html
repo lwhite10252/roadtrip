@@ -21,9 +21,12 @@ Version Notes: 1.0 - Geolocation prints to screen.
   <body>
   <div id="roadMap">
 </div>
-<script type="text/javascript" charset="utf-8" src="phonegap.js"></script>
+<div id="controls">
+<input type='submit' value='start' id='start' onclick='startTrip();' />
+</div>
+<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3npBQ3olMD7l66JnlJ4UQsEUxRJBziEw&callback=initMap&libraries=places" async defer></script>
+ <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3npBQ3olMD7l66JnlJ4UQsEUxRJBziEw&libraries=places"></script>
 <script type="text/javascript">
 app.initialize();
     
