@@ -1,6 +1,7 @@
 var longitude;
 var latitude;
-
+var pos = {};
+var map = {};
 //
 
 var app = {
@@ -34,7 +35,7 @@ onSuccess: function(position) {
 
 //let's make a map object.  We'll put it in the roadMap Div and define it with 
 // our Crucial Units from above. 
-	var map=new google.maps.Map(document.getElementById("roadMap"), mapOptions);      
+	map=new google.maps.Map(document.getElementById("roadMap"), mapOptions);      
    },
 
 //Geo did not locate you. Game over. You're out of quarters. Man.  
@@ -59,5 +60,12 @@ function startTrip(){
     }
 
  function alertDismissed() {
-            // do something
+            //drop a pin, hopefully
+          pos = {lat: latitude, lng:longitude};
+            
+          var marker = new google.maps.Marker({
+          position: pos,
+          map: map,
+          title: 'You are here'
+        });
         }
