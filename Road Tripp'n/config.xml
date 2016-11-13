@@ -78,6 +78,11 @@
         <splash height="960" platform="ios" src="www/res/screen/ios/Default@2x~iphone.png" width="640" />
         <splash height="480" platform="ios" src="www/res/screen/ios/Default~iphone.png" width="320" />
     </platform>
+    <preference name="SplashScreen" value="screen" />
+    <preference name="SplashScreenDelay" value="10000" />
+    <preference name="SplashMaintainAspectRatio" value="true" />
+    <preference name="SplashShowOnlyFirstTime" value="false" />
+    
     <access origin="*" />
     <allow-intent href="http://*/*" />
     <allow-intent href="https://*/*" />
