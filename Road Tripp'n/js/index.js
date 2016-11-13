@@ -14,7 +14,9 @@ var app = {
 	},
 
 //the device is ready, LET'S DO A MAP!!!
-onDeviceReady: function(){
+onDeviceReady: 
+	navigator.splashscreen.hide() //This will hide the splashscreen so that it doesn't run forever
+	function(){
 
 //activate geolocation - GO!
 navigator.geolocation.getCurrentPosition(app.onSuccess, app.onError);
